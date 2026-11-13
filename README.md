@@ -4,7 +4,7 @@ A Swift package for deriving raw Argon2id v1.3 tags using the upstream C
 reference implementation. Supports variable-length salts and output sizes.
 
 ```swift
-.package(url: "https://github.com/zunda-pixel/argon2-swift.git", branch: "main")
+.package(url: "https://github.com/zunda-pixel/argon2-swift.git", from: "0.1.0")
 ```
 
 Add the `Argon2` product to your target.
