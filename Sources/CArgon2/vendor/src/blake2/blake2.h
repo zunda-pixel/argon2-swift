@@ -66,6 +66,15 @@ enum {
         1 / !!(sizeof(blake2b_param) == sizeof(uint64_t) * CHAR_BIT)
 };
 
+/* Avoid duplicate symbols when statically linking with libsodium. */
+#define blake2b_init cargon2_blake2b_init
+#define blake2b_init_key cargon2_blake2b_init_key
+#define blake2b_init_param cargon2_blake2b_init_param
+#define blake2b_update cargon2_blake2b_update
+#define blake2b_final cargon2_blake2b_final
+#define blake2b cargon2_blake2b
+#define blake2b_long cargon2_blake2b_long
+
 /* Streaming API */
 ARGON2_LOCAL int blake2b_init(blake2b_state *S, size_t outlen);
 ARGON2_LOCAL int blake2b_init_key(blake2b_state *S, size_t outlen, const void *key,
